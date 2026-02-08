@@ -77,6 +77,7 @@ ol.list-style li::marker {
     padding-left: 24px;
     padding-right: 24px;
   }
+  
 }
 /*-------------------------
     Typography
@@ -2399,6 +2400,61 @@ input[type=search]::-webkit-search-results-decoration {
   align-items: center;
   display: none;
 }
+.main-menu__logo span {
+  margin-left: 5px; 
+  color: #0F51C2; 
+  font-size: 15px; 
+  font-weight: bold; 
+  vertical-align: -25px;
+}
+
+.main-menu__logo {
+  display: flex;
+  flex-direction: row; /* Блоки располагаются вертикально */
+  align-items: center; /* Центрирование по горизонтали */
+  gap: 20px; /* Расстояние между блоками */
+}
+
+/* Стиль для первого блока */
+.main-menu__logo .block-1,
+.main-menu__logo .block-2 {
+  display: flex;
+  align-items: center; /* Выравнивание по центру по вертикали */
+  gap: 10px; /* Расстояние между элементами внутри блока */
+}
+
+/* Для первого блока: логотип слева, текст справа */
+.main-menu__logo .block-1 {
+  flex-direction: row; /* Элементы в строку */
+}
+
+/* Для второго блока: текст слева, логотип справа */
+.main-menu__logo .block-2 {
+  flex-direction: row-reverse; /* Элементы в строку, но в обратном порядке */
+}
+
+.main-menu__logo .span-1,
+.main-menu__logo .span-2 {  
+  font-size: 17px; 
+  font-weight: bold; 
+  vertical-align: -25px;
+}
+.main-menu__logo .span-1 {
+  margin-left: 5px; 
+  color: #9C6D73;   
+}
+.main-menu__logo .span-2 {
+  margin-left: 5px; 
+  color: #0F51C2; 
+}
+.main-menu__logo .img-1 {
+  width: 123px;
+}
+.main-menu__logo .img-2 {
+  width: 79px;
+  margin-left: 5px
+}
+
 @media screen and (min-width: 1200px) {
   .main-menu .main-menu__left .main-menu__nav .main-menu__list,
 .main-menu .main-menu__left .main-menu__nav .main-menu__list ul,
@@ -2406,7 +2462,7 @@ input[type=search]::-webkit-search-results-decoration {
 .main-menu .main-menu__left .main-menu__nav .stricky-header .main-menu__list ul {
     display: flex;
     gap: 32px;
-  }
+  }    
 }
 .main-menu .main-menu__left .main-menu__nav .main-menu__list > li,
 .main-menu .main-menu__left .main-menu__nav .stricky-header .main-menu__list > li {
@@ -2624,7 +2680,7 @@ input[type=search]::-webkit-search-results-decoration {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
+  z-index: 9999;
   transform: translateX(-100%);
   transform-origin: left center;
   transition: transform 500ms ease 500ms, visibility 500ms ease 500ms;
@@ -2655,10 +2711,10 @@ input[type=search]::-webkit-search-results-decoration {
   bottom: 0;
   background-color: #2a322d;
   opacity: 0.3;
-  cursor: url(../images/close.png), auto;
+  cursor: url(../media/close.png), auto;
 }
 .mobile-nav__wrapper .mobile-nav__content {
-  width: 300px;
+  width: 330px;
   background-color: #2a322d;
   z-index: 10;
   position: relative;
@@ -2700,7 +2756,9 @@ input[type=search]::-webkit-search-results-decoration {
 .mobile-nav__wrapper .mobile-nav__content .main-menu__list li:not(:last-child) {
   border-bottom: 1px solid RGBA(255, 255, 255, 0.1);
 }
-.mobile-nav__wrapper .mobile-nav__content .main-menu__list li a {
+.mobile-nav__wrapper .mobile-nav__content .main-menu__list li a {  
+  min-height: 46px; /* Опционально: минимальная высота */
+  padding: 5px 0; /* Добавляем отступы сверху/снизу */
   display: flex;
   justify-content: space-between;
   line-height: 30px;
@@ -2709,7 +2767,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-family: "Inter", sans-serif;
   text-transform: capitalize;
   font-weight: 600;
-  height: 46px;
+  
   letter-spacing: 0.48px;
   align-items: center;
   transition: 500ms;
@@ -2905,20 +2963,20 @@ footer .copyright_row P {
 
 .hero-banner-1 {
   position: relative;
-  height: 855px;
+  height: 600px;
   background: url(../media/banners/hero-banner-1/hero-bg.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (max-width: 991px) {
   .hero-banner-1 {
-    height: 900px;
+    height: 550px;
   }
 }
 @media (max-width: 575px) {
   .hero-banner-1 {
     background-position: bottom;
-    height: 850px;
+    height: 510px;
   }
 }
 .hero-banner-1 .content {
@@ -2969,6 +3027,10 @@ footer .copyright_row P {
 @media (max-width: 575px) {
   .hero-banner-1 .content .text_block .btn_block .arrow {
     display: none;
+  }
+
+  .hero-banner-1 .content .text_block {
+    padding-top: 240px;
   }
 }
 .hero-banner-1 .content .text_block .video-btn {
@@ -3039,27 +3101,60 @@ footer .copyright_row P {
   .hero-banner-1 .main-img {
     right: 7%;
   }
+  
 }
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
   .hero-banner-1 .main-img {
     right: 3%;
   }
+  .main-menu__logo .span-1,
+  .main-menu__logo .span-2 {  
+    font-size: 13px;         
+  }
+
+  .main-menu__logo .img-1 {
+    width: 105px;
+  }
+  
 }
 @media (max-width: 991px) {
   .hero-banner-1 .main-img {
     width: 300px;
   }
+  
 }
 @media (max-width: 575px) {
   .hero-banner-1 .main-img {
     right: 3%;
     width: 250px;
   }
+
+  /*лого друг под другом*/
+
+  .main-menu__logo {
+    flex-direction: column; /* Блоки друг под другом */
+    gap: 10px; /* Уменьшаем расстояние между блоками */
+  }
+
+  .block-1,
+  .block-2 {
+    flex-direction: column; /* Элементы внутри блоков друг под другом */
+    text-align: center; /* Центрирование текста */
+  }
+
+  .main-menu__logo .img-2 {
+    width: 79px;
+    margin-left: 5px
+  }
+
+  /**************************/
+
 }
 @media (max-width: 400px) {
   .hero-banner-1 .main-img {
     width: 200px;
   }
+  
 }
 .hero-banner-1 .banner_feature_card {
   position: absolute;
@@ -3075,13 +3170,13 @@ footer .copyright_row P {
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
   .hero-banner-1 .banner_feature_card {
     right: 19%;
-  }
+  }  
 }
 @media (max-width: 991px) {
   .hero-banner-1 .banner_feature_card {
     right: 25%;
     bottom: 60px;
-  }
+  }  
 }
 @media (max-width: 767px) {
   .hero-banner-1 .banner_feature_card {
@@ -3091,7 +3186,7 @@ footer .copyright_row P {
 @media (max-width: 450px) {
   .hero-banner-1 .banner_feature_card {
     display: none;
-  }
+  }  
 }
 .hero-banner-1 .banner_feature_card .card_block {
   padding: 12px 24px;
@@ -3124,13 +3219,14 @@ footer .copyright_row P {
   .hero-banner-1 .icons img:nth-child(1) {
     right: 505px;
   }
+  
 }
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
   .hero-banner-1 .icons img:nth-child(1) {
     right: 377px;
     top: 120px;
     width: 40px;
-  }
+  }  
 }
 .hero-banner-1 .icons img:nth-child(2) {
   top: 120px;
@@ -3146,7 +3242,7 @@ footer .copyright_row P {
     right: 516px;
     top: 115px;
     width: 46px;
-  }
+  }  
 }
 .hero-banner-1 .icons img:nth-child(3) {
   top: 195px;
@@ -3162,7 +3258,7 @@ footer .copyright_row P {
     right: 327px;
     top: 216px;
     width: 32px;
-  }
+  }  
 }
 .hero-banner-1 .icons img:nth-child(4) {
   top: 215px;
@@ -3225,7 +3321,7 @@ footer .copyright_row P {
 @media (max-width: 767px) {
   .hero-banner-2 .features_row div:nth-child(1) .feature__card {
     margin-top: -55px;
-  }
+  }  
 }
 @media (max-width: 575px) {
   .hero-banner-2 .features_row div:nth-child(1) .feature__card {
@@ -3239,7 +3335,7 @@ footer .copyright_row P {
 @media (max-width: 767px) {
   .hero-banner-2 .features_row div:nth-child(2) .feature__card {
     margin-top: 0;
-  }
+  }  
 }
 .hero-banner-2 .img_block {
   text-align: right;
@@ -3254,7 +3350,7 @@ footer .copyright_row P {
 @media (max-width: 991px) {
   .hero-banner-2 .img_block {
     margin: 0 0 50px 0;
-  }
+  }  
 }
 .hero-banner-2 .img_block .banner_main_img {
   position: absolute;
@@ -3281,18 +3377,28 @@ footer .copyright_row P {
     position: relative;
     inset: auto;
   }
+  .main-menu__logo .span-1,
+  .main-menu__logo .span-2 {  
+    font-size: 17px;        
+  }
+
+  .main-menu__logo .img-1 {
+    width: 123px;
+  }
 }
 @media (max-width: 991px) {
   .hero-banner-2 .img_block .banner_main_img {
     width: 520px;
     height: 393px;
   }
+  
 }
 @media (max-width: 575px) {
   .hero-banner-2 .img_block .banner_main_img {
     width: auto;
     height: auto;
   }
+  
 }
 .hero-banner-2 .img_block .play-btn {
   position: absolute;
@@ -3332,6 +3438,15 @@ footer .copyright_row P {
     width: 48px;
     height: 48px;
   }
+  .main-menu__logo .span-1,
+  .main-menu__logo .span-2 {  
+    font-size: 15px;        
+  }
+
+  .main-menu__logo .img-1 {
+    width: 100px;
+  }
+  
 }
 .hero-banner-2 .img_block .play-btn i {
   color: #0aa6d7;
@@ -3341,6 +3456,7 @@ footer .copyright_row P {
   .hero-banner-2 .img_block .play-btn i {
     font-size: 16px;
   }
+  
 }
 .hero-banner-2 .img_block .banner_feature_card {
   position: absolute;
@@ -4328,7 +4444,7 @@ footer .copyright_row P {
 @media (max-width: 575px) {
   .page_title_banner {
     background: url(../media/banners/page-title-bg.png);
-    height: 350px;
+    height: 420px;
   }
 }
 .page_title_banner .content {
@@ -4351,6 +4467,7 @@ footer .copyright_row P {
 .page_title_banner .content .title {
   position: relative;
   flex-shrink: 0;
+  margin-top: 100px;
 }
 @media (max-width: 575px) {
   .page_title_banner .content .title {
@@ -4704,6 +4821,26 @@ footer .copyright_row P {
 @media (max-width: 767px) {
   .course__card .course__card__content .right__block::before {
     display: none;
+  }
+  
+}
+@media (max-width: 480px) {
+  .main-menu__logo span {
+    font-size: 13px;            
+  }
+  
+  /*лого пока пусто*/
+}
+@media (max-width: 386px) {
+  .main-menu__logo span {
+    font-size: 10px;        
+  }
+  .main-menu__logo .img-1 {
+    width: 90px;
+  }
+  .main-menu__logo .img-2 {
+    width: 79px;
+    margin-left: 5px
   }
 }
 .course__card .course__card__content .right__block .price_block {

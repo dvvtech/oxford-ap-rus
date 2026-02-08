@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Oxford">
+  <meta name="description" content="АСО Кафедра АП">
 
-  <title>Dr. Yashar</title>
+  <title>АСО Кафедра АП</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon.png">
@@ -19,6 +19,18 @@
   <link rel="stylesheet" href="assets/vendor/jquery-magnific-popup/jquery.magnific-popup.css">
   <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
   <link rel="stylesheet" href="assets/css/app.css">
+
+  <script>
+    async function loadComponent(id, file) {
+      const response = await fetch(file);
+      const content = await response.text();
+      document.getElementById(id).innerHTML = content;
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      loadComponent("footer", "footer.html");
+
+    });
+  </script>
 
 </head>
 
@@ -69,8 +81,18 @@
             <div class="main-menu__left">
 
               <div class="main-menu__logo">
-                <a href="index.html">
-                  <img src="assets/media/logo.png" alt="Educate">
+                <a href="index.html" class="block-1">
+                  <img src="assets/media/logo3.png" class="img-1" alt="Educate">
+                  <span class="span-1">
+                    Академический <br /> Союз <br /> Оксфорда (АСО)
+                  </span>
+                </a>
+
+                <a href="index.html" class="block-2">
+                  <span class="span-2">
+                    Кафедра <br /> Альтернативной <br /> Психологии
+                  </span>
+                  <img src="assets/media/logo1.png" class="img-2" alt="">
                 </a>
               </div>
 
@@ -79,67 +101,46 @@
                   <li class="dropdown">
                     <a href="javascript:void(0);" class="active">Главная</a>
                     <ul>
-                      <li><a href="index.html" class="active">Home 1</a></li>
-                      <li><a href="index-2.html">Home 2</a></li>
+                      <li><a href="index.html" class="active">Библиография</a></li>
+                      <li><a href="resources/main.html">Ресурсы</a></li>
+                      <li><a href="reviews/main.html">Отзывы</a></li>
+                      <li><a href="gallery/main.html">Галерея</a></li>
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="javascript:void(0);">О кафедре</a>
+                    <a href="javascript:void(0);">Кафедра</a>
                     <ul>
-                      <li><a href="courses.html">История учреждения кафедры</a></li>
+                      <li><a href="department/history.html">История учреждения кафедры</a></li>
                       <li><a href="department/aboutDoctor.html">О профессоре Яшаре Ибадове</a></li>
                       <li><a href="department/aboutDoctorYashar.html">About Professor Yashar Ibadov</a></li>
+                      <li><a href="department/aboutDoctorYashar.html">Фотогалерея</a></li>
                     </ul>
                   </li>
-                  
+
                   <li class="dropdown">
-                    <a href="javascript:void(0);">Blog</a>
-                    <ul class="sub-menu">
-                      <li class="dropdown">
-                        <a href="javascript:void(0);">Blog Grid</a>
-                        <ul class="sub-menu">
-                          <li><a href="blog-grid.html">No Sidebar</a></li>
-                          <li><a href="blog-grid-left.html">Left Sidebar</a></li>
-                          <li><a href="blog-grid-right.html">Right Sidebar</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown">
-                        <a href="javascript:void(0);">Blog List</a>
-                        <ul class="sub-menu">
-                          <li><a href="blog-list-left.html">Left Sidebar</a></li>
-                          <li><a href="blog-list-right.html">Right Sidebar</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="blog-detail.html">Blog Detail</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown ">
-                    <a href="javascript:void(0);">Pages</a>
+                    <a href="javascript:void(0);">О науке</a>
                     <ul>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="team.html">Our Teacher</a></li>
-                      <li><a href="team-detail.html">Teacher Detail</a></li>
-                      <li><a href="join.html">Become Teacher</a></li>
-                      <li><a href="gallery.html">Gallery 1</a></li>
-                      <li><a href="gallery.html">Gallery 2</a></li>
-                      <li><a href="faq.html">Faq's</a></li>
-                      <li><a href="login.html">Login</a></li>
-                      <li><a href="register.html">Register</a></li>
+                      <!--<li><a href="science/roseOfVenus.html">Роза Венеры</a></li>-->
+                      <li><a href="science/logotype.html">"Yay-Osido"- logotype of our company</a></li>
+                      <li><a href="science/company.html">Company profile</a></li>
+                      <li><a href="science/career.html">Career</a></li>
                     </ul>
                   </li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="research/main.html">Исследования</a></li>
+                  <li><a href="news/main.html">Новости</a></li>
+                  <li><a href="contact.html">Контакты</a></li>
                 </ul>
               </div>
             </div>
             <div class="main-menu__right">
-              <a href="#" class="main-menu__search search-toggler">
+              <!--<a href="#" class="main-menu__search search-toggler">
                 <i class="fal fa-search"></i>
               </a>
               <a href="login.html" class="main-menu__login">
                 <i class="fal fa-user"></i>
               </a>
               <a href="contact.html" class="educate-btn sm d-xl-flex d-none"><span
-                  class="educate-btn__curve"></span>Enroll Now</a>
+                  class="educate-btn__curve"></span>Enroll Now</a>-->
               <a href="#" class="main-menu__toggler mobile-nav__toggler">
                 <i class="fa fa-bars"></i>
               </a>
@@ -157,36 +158,40 @@
     <!-- Hero Banner Start -->
     <section class="hero-banner-1">
       <div class="container">
-        <div class="icons">
+        <!--<div class="icons">
           <img src="assets/media/shapes/dollar.png" alt="" class="dollar wow zoomIn" data-wow-delay="400ms">
           <img src="assets/media/shapes/mic.png" alt="" class="mic wow zoomIn" data-wow-delay="500ms">
           <img src="assets/media/shapes/light.png" alt="" class="light wow zoomIn" data-wow-delay="600ms">
           <img src="assets/media/shapes/camera.png" alt="" class="camera wow zoomIn" data-wow-delay="700ms">
-        </div>
+        </div>-->
         <div class="content">
           <div class="text_block wow fadeInUp" data-wow-delay="800ms">
             <div class="row">
               <div class="col-xl-6 col-lg-8">
                 <img src="assets/media/shapes/tag.png" alt="" class="mb-24 tag wow slideInDown" data-wow-delay="550ms">
                 <!--<h1 class="mb-16 title">Best Online Learning <span class="fm-sec">Resources! <img-->
-				<h1 class="mb-16 title">С праздником <span class="fm-sec">Навруз! <img
+                <h1 class="mb-16 title">Открытие нового департамента <span class="fm-sec">
+                  </span></h1>
+                <!--<h1 class="mb-16 title">Концепция кафедры <span class="fm-sec">Альтернативной психологии
+                    <!--<img
                       src="assets/media/shapes/rocket.png" alt="" class="rocket wow zoomIn"
-                      data-wow-delay="700ms"></span></h1>
-                <h4 class="mb-48">Make Your Free Account & Get Discounts</h4>
+                      data-wow-delay="700ms">-->
+                <!--</span></h1>-->
+                <!--<h4 class="mb-48">Make Your Free Account & Get Discounts</h4>
                 <div class="btn_block">
                   <a href="contact.html" class="educate-btn sec"><span class="educate-btn__curve"></span>Enroll Now </a>
                   <img src="assets/media/shapes/arrow.png" alt="" class="arrow">
-                </div>
-                <div class="video-btn wow zoomIn" data-wow-delay="700ms">
+                </div>-->
+                <!--<div class="video-btn wow zoomIn" data-wow-delay="700ms">
                   <img src="assets/media/banners/hero-banner-1/round-text.png" alt="" class="text-vector">
                   <a href="https://www.youtube.com/watch?v=8nXX1WOuvrk" class="play-btn video-popup"><i
                       class="fas fa-play"></i></a>
-                </div>
+                </div>-->
               </div>
             </div>
           </div>
         </div>
-        <div class="banner_feature_card">
+        <!--<div class="banner_feature_card">
           <div class="card_block">
             <h6 class="mb-4p">Award Winning Courses</h6>
             <p>Based on Latest Knowledge</p>
@@ -194,12 +199,155 @@
           </div>
         </div>
         <img src="assets/media/banners/hero-banner-1/main-img.png" alt="" class="main-img">
-      </div>
+      </div>-->
     </section>
     <!-- Hero Banner End -->
 
-    <!-- Features Area Start -->
     <section class="py-60">
+      <div class="container">
+        <div class="blog_detail">
+          <div class="row">
+
+            <div class="col-lg-12">
+
+              <h3 class="mb-16">Открытие нового департамента при Международной Академии Экоэнергетики
+                Айзербайджанской Республики</h3>
+
+
+              <p class="mb-24">
+                Новый департамент при Международной Академии Экоэнергетики Азербайджанской республики. Институт
+                Ботаники Национальной АН Азербайджана Institute of botany of Academy of Sciences
+                Институт ботаники имени В. Л. Комарова АН Азербайджанской
+                Международная Академия Экоэнергетики / International Academy of Ecoenergy.
+                <br>
+              </p>
+              <img src="assets/media/news/diploma_s.jpg" alt="" class="d-block mx-auto mb-24">
+              <p class="mb-24">
+                Международная Академия Экоэнергетики Азербайджанской Республики пригласила профессора
+                Я.С.Ибадова провести семинар о возможностях новой науки Альтернативной психологии в решении
+                насущных экологических задач. Семинар состоялся 21 июня 2025 года. Выступление профессора
+                вызвало живой интерес и получило всеобщее одобрение слушателей, ученых и президента Академии.
+                <br>Через десять дней после семинара профессора Я.С. Ибадова снова пригласили в Академию для
+                вручения диплома академика Академии Экоэнергетики АР. В завершении церемонии вручения диплома
+                произошло неожиданное событие. Президент Академии предложил профессору Я.С. Ибадову возглавить
+                вновь открытый "Медико-биологический и экологический департамент". Таким образом 11 июля 2025
+                года профессор Я.С. Ибадов был назначен вице-президентом нового департамента Академии
+                Экоэнергетики АР.
+                <br>Через несколько дней профессора Я.С.Ибадова пригласили принять участие в форуме
+                "Целительство, которое приходит из природы".
+
+              </p>
+
+              <p class="mb-24">
+                И 25 июля 2025 года в Институте Ботаники имени В. Л. Комарова Национальной АН
+                Азербайджана (Institute of botany of Academy of Sciences) состоялся
+                форум «Целительство, которое приходит из природы». Бурными
+                продолжительными овациями был встречен доклад профессора, доктора
+                медико-биологических наук, академика Яшара Ибадова!
+                <br>В своем выступлении доктор Я.С. Ибадов представил результаты и
+                достижения своей авторской науки «Альтернативная психология» и
+                обосновал ее весомый вклад в решение актуальных проблем экологии и
+                медицины. Методы Альтернативной психологии — психография,
+                психокоррекция, психургия, создание психограмм и фазовых портретов
+                живых систем — позволяют на практике корректировать и гармонизировать
+                психическое состояние каждого человека, его взаимодействие с
+                окружающей средой на информационно-энергетическом уровне. Это
+                способствует оздоровлению человека и улучшению условий его жизни.
+                <br>Желаем уважаемому академику Яшару Ибадову больших успехов на новом поприще!!!
+              </p>
+<br/><br/><br/>
+              <h3 class="mb-16">Концепция кафедры Альтернативной психологии</h3>
+
+              <p class="mb-23">
+                Цели, направленные на реализацию миссии и видения департамента:</p>
+              <p class="mb-23">
+                - разработка учебно-методического пособия для обучения специалистов в области АП;</p>
+              <p class="mb-23">
+                - организация преподавания теории и практики АП;</p>
+              <p class="mb-23">
+                - организация постоянно действующей научной конференции, посвященной проблемам
+                АП;</p>
+              <p class="mb-24">
+                - организация консультационного центра при департаменте АП.
+              </p>
+              <p class="mb-24">
+                <b>Миссия:</b> развивать научно обоснованную, инновационную методику альтернативной
+                психологии, помогающую в комплексе решать проблемы, связанные с физическим,
+                духовным здоровьем человека, его социальным благополучием.
+              </p>
+              <p class="mb-24">
+                Альтернативная Психология рассматривает психику в статусе энергоинформационной
+                системы, взаимодействующей с окружающим миром во времени и пространстве.
+                Методология Альтернативной Психологии включает в себя наработки, сделанные в
+                области психоаналитической теории, дифференциальной и медицинской психологии,
+                психодиагностики и психотерапии. Объектом исследования в Альтернативной
+                Психологии являются энерго-информационные аспекты жизнедеятельности
+                биопсихосоциальных систем, предметом – метаморфозы живых систем в процессе их
+                взаимодействия с окружающим миром во времени и пространстве.
+                Разработанные Альтернативной Психологией методы психографии, психокоррекции,
+                психургии и фазовых портретов позволяют выявить ранние метаморфозы психики на
+                уровне биоэнергетической матрицы и провести их своевременную коррекцию,
+                восстанавливая программу здоровья на энергоинформационном уровне.
+              </p>
+              <p class="mb-24">
+                <b>Социальная роль.</b> Методы Альтернативной психологии способствуют успешной
+                социализации личности, гармонизации межличностных отношений, взаимодействия
+                человека с внешней природной и социокультурной средой.
+              </p>
+              <p class="mb-24">
+                Методы АП позволяют решать следующие проблемы:
+              </p>
+              <p class="mb-23">
+                1. Здоровое и активное долголетие, развитие творческого потенциала личности</p>
+              <p class="mb-23">
+                2. Создание семьи и развитие семейных отношений.</p>
+              <p class="mb-23">
+                3. Формирование позитивного Будущего.</p>
+              <p class="mb-23">
+                4. Желания человека, их закономерность и возможность реализации.</p>
+              <p class="mb-23">
+                5. Формирования экологического сознания, культуры мышления, поведения и образа
+                жизни.</p>
+              <p class="mb-24">
+                6. Создают условия для развития гармоничного и экологически здорового человека,
+                указывают пути совершенствования личности.</p>
+              <p class="mb-24">
+                <b>Видение</b> (Стратегическая цель):
+                научно-исследовательская, просветительская, образовательная деятельность (подготовка
+                специалистов), создание инновационных технологий, изготовление новых гармонизаторов
+                и приборов, оказание консультационных услуг.
+              </p>
+              <p class="mb-24">
+                Цели, направленные на реализацию миссии и видения департамента:</p>
+              <p class="mb-23">
+                - разработка учебно-методического пособия для обучения специалистов в области АП;</p>
+              <p class="mb-23">
+                - организация преподавания теории и практики АП;</p>
+              <p class="mb-23">
+                - организация постоянно действующей научной конференции, посвященной проблемам
+                АП;</p>
+              <p class="mb-24">
+                - организация консультационного центра при департаменте АП.
+              </p>
+              <p class="mb-24">
+                <b>Область предлагаемого отдела</b> (медицина, психология, образование)
+                Исследования в области альтернативной психологии могут представлять интерес для
+                философии и физики (изучение общих свойств пространства и времени); для медицины
+                (оздоровление человека и профилактика болезней); для биологии (расширение познания
+                свойств жизни); для педагогической практики (расширение мировоззрения учеников и
+                студентов, раскрытие и направление творческого потенциала); для психологии 
+                (применение методологии работы в причине метаморфоз позволило расширить
+                существующие методы в психологии и создать новые).
+              </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Area Start -->
+    <!--<section class="py-60">
       <div class="container">
         <div class="row row-gap-4">
           <div class="col-xl-3 col-sm-6 wow fadeInUp" data-wow-delay="200ms">
@@ -252,11 +400,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- Features Area End -->
 
     <!-- About Area Start -->
-    <section class="py-60">
+    <!--<section class="py-60">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-48 mb-lg-0">
@@ -298,11 +446,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- About Area End -->
 
     <!-- Brands Area Start -->
-    <div class="py-80 bg-white">
+    <!--<div class="py-80 bg-white">
       <div class="brands-slider">
         <div class="brand">
           <img src="assets/media/brand/barnd-1.png" alt="">
@@ -341,11 +489,11 @@
           <img src="assets/media/brand/barnd-6.png" alt="">
         </div>
       </div>
-    </div>
+    </div>-->
     <!-- Brands Area End -->
 
     <!-- Courses Category Area Start -->
-    <section class="py-60 ">
+    <!--<section class="py-60 ">
       <div class="container">
         <div class="section-title mb-48">
           <div class="heading">
@@ -442,12 +590,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- Courses Category Area End -->
 
     <!-- Courses Area Start -->
-    <section class="courses-1 py-60">
-      <div class="container">
+    <!--<section class="courses-1 py-60">-->
+    <!--<div class="container">
         <div class="section-title mb-48">
           <div class="heading">
             <h6 class="color-primary mb-8">–––– Popular Courses</h6>
@@ -456,10 +604,10 @@
           <a href="courses.html" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
             All</a>
         </div>
-      </div>
-      <div class="courses-slider">
-        <!-- Slide Item  -->
-        <div class="course__card mb-24">
+      </div>-->
+    <!--<div class="courses-slider">-->
+    <!-- Slide Item  -->
+    <!--<div class="course__card mb-24">
           <div class="course__card__icon">
             <img src="assets/media/icons/ps.png" alt="">
           </div>
@@ -492,9 +640,9 @@
             </div>
             <img src="assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
           </div>
-        </div>
-        <!-- Slide item  -->
-        <div class="course__card mb-24">
+        </div>-->
+    <!-- Slide item  -->
+    <!--<div class="course__card mb-24">
           <div class="course__card__icon">
             <img src="assets/media/icons/ai.png" alt="">
           </div>
@@ -527,9 +675,9 @@
             </div>
             <img src="assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
           </div>
-        </div>
-        <!-- Slide item  -->
-        <div class="course__card mb-24">
+        </div>-->
+    <!-- Slide item  -->
+    <!--<div class="course__card mb-24">
           <div class="course__card__icon">
             <img src="assets/media/icons/desktop.png" alt="">
           </div>
@@ -562,9 +710,9 @@
             </div>
             <img src="assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
           </div>
-        </div>
-        <!-- Slide item  -->
-        <div class="course__card mb-24">
+        </div>-->
+    <!-- Slide item  -->
+    <!--<div class="course__card mb-24">
           <div class="course__card__icon">
             <img src="assets/media/icons/figma.png" alt="">
           </div>
@@ -597,9 +745,9 @@
             </div>
             <img src="assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
           </div>
-        </div>
-        <!-- Slide item  -->
-        <div class="course__card mb-24">
+        </div>-->
+    <!-- Slide item  -->
+    <!--<div class="course__card mb-24">
           <div class="course__card__icon">
             <img src="assets/media/icons/ai2.png" alt="">
           </div>
@@ -632,9 +780,9 @@
             </div>
             <img src="assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
           </div>
-        </div>
-        <!-- Slide item  -->
-        <div class="course__card mb-24">
+        </div>-->
+    <!-- Slide item  -->
+    <!--<div class="course__card mb-24">
           <div class="course__card__icon">
             <img src="assets/media/icons/ai3.png" alt="">
           </div>
@@ -667,13 +815,13 @@
             </div>
             <img src="assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
           </div>
-        </div>
-      </div>
-    </section>
+        </div>-->
+    <!--</div>
+    </section>-->
     <!-- Courses Area End -->
 
     <!-- Team Area Start -->
-    <section class="team py-60">
+    <!--<section class="team py-60">
       <img src="assets/media/shapes/dots-1.png" alt="" class="dots">
       <img src="assets/media/icons/3dtag.png" alt="" class="tag">
       <div class="row align-items-center">
@@ -793,11 +941,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- Team Area End -->
 
     <!-- Discount Banner Area Start -->
-    <section class="discount_banner">
+    <!--<section class="discount_banner">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-xl-6 col-lg-5">
@@ -853,11 +1001,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- Discount Banner Area End -->
 
     <!-- Testimonials Area Start -->
-    <section class="testimonials py-60">
+    <!--<section class="testimonials py-60">
       <div class="container">
         <div class="row">
           <div class="col-xl-5">
@@ -949,11 +1097,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- Testimonials Area End -->
 
     <!-- Blogs Area Start -->
-    <section class="py-60 ">
+    <!--<section class="py-60 ">
       <div class="container">
         <div class="section-title mb-48">
           <div class="heading">
@@ -1029,11 +1177,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- Blogs Area End -->
 
     <!-- Contact Banner Area Start -->
-    <section class="py-60 ">
+    <!--<section class="py-60 ">
       <div class="container">
         <div class="contact_banner">
           <h2 class="mb-8 color-white">Ask Any Questions <br><span class="fm-sec">You Want!</span></h2>
@@ -1054,103 +1202,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <!-- Contact Banner Area End -->
 
-    <!-- Footer Area Start -->
-    <footer>
-      <div class="footer_main py-60">
-        <img src="assets/media/shapes/vector-7.png" alt="" class="vector_shape">
-        <img src="assets/media/shapes/dots-1.png" alt="" class="dots">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-3 ">
-              <div class="footer_widget">
-                <a href="index.html" class="mb-8"><img src="assets/media/logo.png" alt=""></a>
-                <p class="description_text">Lorem ipsum dolor sit amet consectetur. Non convallis sed id aliquam tempus.
-                  Volutpat tortor tincidunt egestas sit risus donec.</p>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-sm-6">
-              <div class="footer_widget">
-                <h5 class="medium-black mb-16">Quick Links</h5>
-                <ul class="unstyled list">
-                  <li><a href=""><i class="fad fa-chevron-right"></i>Courses</a></li>
-                  <li><a href=""><i class="fad fa-chevron-right"></i>Join a Career</a></li>
-                  <li><a href=""><i class="fad fa-chevron-right"></i>Upcoming Events</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-sm-6">
-              <div class="footer_widget">
-                <h5 class="medium-black mb-16">Explore</h5>
-                <ul class="unstyled list">
-                  <li><a href="about.html"><i class="fad fa-chevron-right"></i>About Us</a></li>
-                  <li><a href="gallery.html"><i class="fad fa-chevron-right"></i>Gallery</a></li>
-                  <li><a href="team-detail.html"><i class="fad fa-chevron-right"></i>Teacher’s Detail</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-sm-6">
-              <div class="footer_widget">
-                <h5 class="medium-black mb-16">Information</h5>
-                <ul class="unstyled list">
-                  <li><a href="login.html"><i class="fad fa-chevron-right"></i>Login</a></li>
-                  <li><a href="register.html"><i class="fad fa-chevron-right"></i>Register</a></li>
-                  <li><a href="contact.html"><i class="fad fa-chevron-right"></i>Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="footer_widget">
-                <h5 class="medium-black mb-16">Contact Us</h5>
-                <ul class="unstyled list">
-                  <li class="mb-16"><i class="fal fa-map-marker-alt"></i>631 Elgin ST. Celina, State 111111</li>
-                  <li class="mb-16"><a href="mailto:info@example.com"><i
-                        class="fal fa-envelope"></i>email@example.com</a></li>
-                  <li><a href="tel:123456789"><i class="fal fa-phone-alt"></i>+1 234 567 890</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="bottom-row">
-            <ul class="unstyled social_icons_list">
-              <li>
-                <a href="">
-                  <img src="assets/media/icons/brands/Instagram.png" alt="">
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/media/icons/brands/Facebook.png" alt="">
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/media/icons/brands/Twitter.png" alt="">
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="assets/media/icons/brands/Linkedin.png" alt="">
-                </a>
-              </li>
-            </ul>
-            <div class="newsletter_block">
-              <h5>Newsletter</h5>
-              <form class="newsletter">
-                <input type="email" class="form-control" required placeholder="Your email">
-                <button type="submit" class="educate-btn sm"><span class="educate-btn__curve"></span>Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright_row">
-        <p>©2024 Educate All Rights Reserved.</p>
-      </div>
-    </footer>
-    <!-- Footer Area End -->
+    <!-- Footer -->
+    <div id="footer"></div>
 
   </div>
 
@@ -1158,27 +1214,27 @@
   <div class="mobile-nav__wrapper">
     <div class="mobile-nav__overlay mobile-nav__toggler"></div>
     <div class="mobile-nav__content">
-      <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-      <div class="logo-box">
+      <!--<span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>-->
+      <!--<div class="logo-box">
         <a href="index.html" aria-label="logo image"><img src="assets/media/logo-light.png" alt="educate"></a>
-      </div>
-      <div class="mobile-nav__container"></div>
+      </div>-->
+      <div style="margin-top: 90px;" class="mobile-nav__container"></div>
       <ul class="mobile-nav__contact list-unstyled">
         <li>
           <i class="fas fa-envelope"></i>
-          <a href="mailto:example@company.com">example@company.com</a>
+          <a href="mailto:example@company.com">yazer99@gmail.com</a>
         </li>
         <li>
           <i class="fa fa-phone-alt"></i>
-          <a href="tel:+12345678">+123 (4567) -890</a>
+          <a href="tel:+12345678">+(994) 50 890 88</a>
         </li>
       </ul>
-      <div class="mobile-nav__social">
+      <!--<div class="mobile-nav__social">
         <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
         <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
         <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
         <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-      </div>
+      </div>-->
     </div>
   </div>
   <!-- Mobile Menu End -->
